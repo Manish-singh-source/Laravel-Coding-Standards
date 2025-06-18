@@ -29,3 +29,22 @@ php artisan serve
 
 Now visit http://127.0.0.1:8000
 You'll see the home page.
+
+
+## Step 3: Connect Mysql Database By Setting Up Environment Variables
+Edit .env file with your DB details:
+
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=database_name
+DB_USERNAME=root
+DB_PASSWORD=your_password
+```
+
+Then run:
+```
+php artisan migrate
+```
+
