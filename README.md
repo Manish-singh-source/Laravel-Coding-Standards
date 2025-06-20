@@ -112,6 +112,13 @@ Route::get('/customer/{id}', [UserController::class, 'functionName']);
 
 ```
 
+## Create View File:
+```
+php artisan make:controller <ControllerName>
+```
+
+First letter capital : e.x. AuthController 
+
 
 
 
