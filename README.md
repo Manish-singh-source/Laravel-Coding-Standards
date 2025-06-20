@@ -126,7 +126,7 @@ First letter capital : e.x. AuthController
 
 ## Steps For Creating CRUD Operations
 
-### **Create A Route For Opening List of Customers Page**
+### **Step 1: Create A Route For Opening List of Customers Page**
 
 1. Create a View File and then add PHP code in it:
 
@@ -140,7 +140,7 @@ First letter capital : e.x. AuthController
       php artisan make:view customers-list
    ```
 
-2. **Displaying List of Something Page:** Displaying above page using following route. 
+2. **Displaying List Page:** Displaying above page using following route.
 
    ```
       Route::get('/url', function () {
@@ -157,3 +157,52 @@ First letter capital : e.x. AuthController
    ```
 
 
+
+### **Step 2: 'Create a New Customer' Page And Store Customer Details**
+
+
+1. **Create a New Customer Page:** Using same above step. And Add additional form details as below 
+
+   ```
+   <form class="row g-3" action="{{ route('nameForRoute') }}" method="POST">
+      @csrf
+      @method('POST')
+
+      .... Form inputs with proper name attribute 
+
+   </form>
+   ```
+
+   Example: Submit data on customers.list named route with get/post/put/delete method
+   ```
+   <form class="row g-3" action="{{ route('customers.list') }}" method="POST">
+      @csrf
+      @method('POST')
+
+      .... Form inputs with proper name attribute 
+
+   </form>
+   ```
+
+2. **Make a Route With Post Method For Storing Form Data:**
+   ```
+      Route::post('/url', [NameForController::class, 'functionInController'])->name('nameForRoute');
+   ```
+
+   Example:
+
+   ```
+      Route::post('/url', [CustomerController::class, 'addCustomer'])->name('customer.add');
+   ```
+
+3. **Create a Controller File** Create Controller File with proper name.
+
+   ```
+      php artisan make:controller <ControllerName>
+   ```
+
+   Example:
+
+   ```
+      php artisan make:controller CustomerController
+   ```
