@@ -124,4 +124,36 @@ First letter capital : e.x. AuthController
 
 
 
+## Steps For Creating CRUD Operations
+
+### **Create A Route For Opening List of Customers Page**
+
+1. Create a View File and then add PHP code in it:
+
+   ```
+      php artisan make:view <fileName>
+   ```
+
+   Example:
+
+   ```
+      php artisan make:view customers-list
+   ```
+
+2. **Displaying List of Something Page:** Displaying above page using following route. 
+
+   ```
+      Route::get('/url', function () {
+         return view('pageName');
+      })->name('nameForLinking');
+   ```
+
+   Example:
+
+   ```
+      Route::get('/url', function () {
+         return view('customers-list');
+      })->name('customers.list');
+   ```
+
 
