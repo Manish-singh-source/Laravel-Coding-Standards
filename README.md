@@ -87,3 +87,34 @@ php artisan serve
 Starts the application on a local server (usually at http://localhost:8000).
 
 
+## Create View File:
+```
+php artisan make:view <fileName>
+```
+
+
+## Create Route : Open web.php file
+```
+// view all customer page 
+Route::get('/customer', [UserController::class, 'functionName']);
+// open add customer page
+Route::get('/customer/create', [UserController::class, 'functionName']);
+// store add customer data
+Route::post('/customer/store', [UserController::class, 'functionName']);
+// go to edit page 
+Route::get('/customer/edit/{id}', [UserController::class, 'functionName']);
+// store edit page data
+Route::put('/customer/edit/{id}', [UserController::class, 'functionName']);
+// delete customer data
+Route::delete('/customer/{id}', [UserController::class, 'functionName']);
+// view individual customer data
+Route::get('/customer/{id}', [UserController::class, 'functionName']);
+
+```
+
+
+
+
+
+
+
