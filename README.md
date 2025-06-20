@@ -112,7 +112,7 @@ Route::get('/customer/{id}', [UserController::class, 'functionName']);
 
 ```
 
-## Create View File:
+## Create Controller File:
 ```
 php artisan make:controller <ControllerName>
 ```
