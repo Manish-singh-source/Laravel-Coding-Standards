@@ -211,6 +211,3 @@ php artisan queue:failed
 * Use `php artisan horizon` (recommended for Redis-based queues).
 * Optimize indexes in DB for large data sets.
 
----
-
-Let me know if you want to **store file metadata**, **validate Excel data**, or **import to multiple related tables** — I’ll guide you further.
