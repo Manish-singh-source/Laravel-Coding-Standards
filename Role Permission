@@ -1,0 +1,24 @@
+-Model
+Access 
+@can('PermissionChecker', 'view_customer-detail')
+Model Content
+@endcan
+
+Page
+===================
+@php
+$permissions = json_decode($role->permissions, true);
+@endphp
+
+
+<div class="form-check form-switch">
+<input type="checkbox" value="view_dashboard"
+name="permission[view_dashboard]"
+class="form-check-input" id="view_dashboard"
+@if (isset($permissions['view_dashboard'])) checked @endif>
+<label class="form-check-label"
+for="view_dashboard"></label>
+</div>
+
+
+
