@@ -1,4 +1,7 @@
 1 Create -Model 
+```
+php artisan make:model Role -m
+```
 ================================================================
 Page:-
 <?php
