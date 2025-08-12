@@ -1,4 +1,5 @@
-```use Illuminate\Support\Facades\Gate;
+```
+use Illuminate\Support\Facades\Gate;
 // 
 public function boot()
 {
