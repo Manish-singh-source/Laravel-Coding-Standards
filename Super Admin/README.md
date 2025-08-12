@@ -1,5 +1,5 @@
-use Illuminate\Support\Facades\Gate;
-// ...
+```use Illuminate\Support\Facades\Gate;
+// 
 public function boot()
 {
     // Implicitly grant "Super Admin" role all permissions
@@ -8,3 +8,4 @@ public function boot()
         return $user->hasRole('Super Admin') ? true : null;
     });
 }
+```
