@@ -1,4 +1,4 @@
-*** Gate::before
+***Gate::before
 
 ```
 use Illuminate\Support\Facades\Gate;
